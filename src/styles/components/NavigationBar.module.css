@@ -6,12 +6,22 @@
 }
 
 .container {
-  background-color: rgb(231, 231, 231);
-  box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
+  background-color: var(--header-background);
+  box-shadow: 0 8px 6px -6px var(--box-shadow);
 }
 
 .container img {
   width: 5vh;
   height: 5vh;
   margin-right: 5px;
+}
+
+.container h1 {
+  color: var(--title);
+}
+
+.DarkModeButton {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
 }
