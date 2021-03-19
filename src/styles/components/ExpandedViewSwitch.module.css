@@ -1,3 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewState {
+  margin: 10px;
+  color: var(--white);
+  font-size: 24;
+  font-weight: bold;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
