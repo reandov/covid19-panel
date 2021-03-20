@@ -1,6 +1,6 @@
 // Component Importations
 import { NavigationBar } from "../components/NavigationBar";
-import { SimpleView } from "../components/SimpleView";
+import { ViewManager } from "../components/ViewManager";
 
 // Contexts Importations
 import { ViewerSwitcherProvider } from "../contexts/ViewerSwitcherContext";
@@ -13,7 +13,7 @@ export default function Home() {
         <ViewerSwitcherProvider>
           <NavigationBar />
           <DataProvider>
-            <SimpleView />
+            <ViewManager />
           </DataProvider>
         </ViewerSwitcherProvider>
       </>

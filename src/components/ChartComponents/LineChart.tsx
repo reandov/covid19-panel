@@ -22,6 +22,9 @@ export function LineChart({
     chart: {
       height: 350,
       type: "area",
+      animations: {
+        enabled: false,
+      },
       locales: [
         {
           name: "ptbr",
