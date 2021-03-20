@@ -1,15 +1,15 @@
+import { useContext } from "react";
+
 import { LineChart } from "./ChartComponents/LineChart";
 
-import styles from "../styles/components/SimpleModeView.module.css";
+import { DataContext } from "../contexts/DataContext";
 
-import * as covid_data from "../../data/test_data.json";
+import styles from "../styles/components/SimpleView.module.css";
 
-export function SimpleModeView() {
-  var dates = Object.values(covid_data.date);
-  var acc_cases = Object.values(covid_data.accumulated_num_cases);
-  var acc_deaths = Object.values(covid_data.accumulated_num_deaths);
-  var new_cases = Object.values(covid_data.new_num_cases);
-  var new_deaths = Object.values(covid_data.new_num_deaths);
+export function SimpleView() {
+  var { dates, acc_cases, acc_deaths, new_cases, new_deaths } = useContext(
+    DataContext
+  );
 
   return (
     <div className="container">

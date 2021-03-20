@@ -1,12 +1,10 @@
 import { useContext } from "react";
-import { ExpandedViewContext } from "../contexts/ExpandedViewContext";
+import { ViewerSwitcherContext } from "../contexts/ViewerSwitcherContext";
 
-import styles from "../styles/components/ExpandedViewSwitch.module.css";
+import styles from "../styles/components/ViewSwitcher.module.css";
 
-export function ExpandedViewSwitch() {
-  const { isExpandedViewOn, switchExpandedView } = useContext(
-    ExpandedViewContext
-  );
+export function ViewSwitcher() {
+  const { switchToExpandedView } = useContext(ViewerSwitcherContext);
 
   return (
     <div className={styles.container}>
@@ -15,7 +13,7 @@ export function ExpandedViewSwitch() {
         <input
           type="checkbox"
           className={styles.test}
-          onChange={() => switchExpandedView()}
+          onChange={switchToExpandedView}
         />
         <span className={`${styles.slider} ${styles.round}`}></span>
       </label>

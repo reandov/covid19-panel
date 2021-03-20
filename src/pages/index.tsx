@@ -1,21 +1,21 @@
+// Component Importations
 import { NavigationBar } from "../components/NavigationBar";
-import { SimpleModeView } from "../components/SimpleModeView";
-import { ExpandedViewSwitch } from "../components/ExpandedViewSwitch";
+import { SimpleView } from "../components/SimpleView";
 
-import { useContext } from "react";
-import { ExpandedViewProvider } from "../contexts/ExpandedViewContext";
-
-import styles from "../styles/pages/Home.module.css";
+// Contexts Importations
+import { ViewerSwitcherProvider } from "../contexts/ViewerSwitcherContext";
+import { DataProvider } from "../contexts/DataContext";
 
 export default function Home() {
   return (
     <div className="container">
       <>
-        <NavigationBar />
-        <SimpleModeView />
-        <ExpandedViewProvider>
-          <ExpandedViewSwitch />
-        </ExpandedViewProvider>
+        <ViewerSwitcherProvider>
+          <NavigationBar />
+          <DataProvider>
+            <SimpleView />
+          </DataProvider>
+        </ViewerSwitcherProvider>
       </>
     </div>
   );

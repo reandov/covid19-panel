@@ -1,4 +1,4 @@
-import { ExpandedViewSwitch } from "./ExpandedViewSwitch";
+import { ViewSwitcher } from "./ViewSwitcher";
 
 import styles from "../styles/components/NavigationBar.module.css";
 
@@ -8,7 +8,7 @@ export function NavigationBar() {
       <img src="/icons/covid_icon.svg" alt="virus icon" />
       <h1>COVID-19 — Painel</h1>
       <div className={styles.DarkModeButton}>
-        <ExpandedViewSwitch />
+        <ViewSwitcher />
       </div>
     </div>
   );
