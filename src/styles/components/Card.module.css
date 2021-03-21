@@ -1,0 +1,29 @@
+.container {
+  width: 18%;
+  background-color: #f7b707;
+  border-radius: 10px;
+  border: 5px solid #c79407;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardInfo h1 {
+  color: white;
+}
+
+.cardInfo hr {
+  width: 100%;
+  color: black;
+  border: 1px solid var(--white);
+}
+
+.cardInfo p {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--white);
+}
