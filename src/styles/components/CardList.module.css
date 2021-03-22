@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+  }
+}

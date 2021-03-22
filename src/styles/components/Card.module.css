@@ -1,8 +1,25 @@
-.container {
-  width: 18%;
-  background-color: #f7b707;
+.container-cases {
+  width: 14%;
+  background-color: #ffc107;
   border-radius: 10px;
-  border: 5px solid #c79407;
+  border: 5px solid #ffab00;
+  box-shadow: 0 6px 6px -6px var(--box-shadow);
+}
+
+.container-deaths {
+  width: 14%;
+  background-color: #e53935;
+  border-radius: 10px;
+  border: 5px solid #c72407;
+  box-shadow: 0 6px 6px -6px var(--box-shadow);
+}
+
+.container-vaccines {
+  width: 14%;
+  background-color: #0cc705;
+  border-radius: 10px;
+  border: 5px solid #069218;
+  box-shadow: 0 6px 6px -6px var(--box-shadow);
 }
 
 .cardInfo {
@@ -14,6 +31,7 @@
 
 .cardInfo h1 {
   color: white;
+  font-size: 24px;
 }
 
 .cardInfo hr {
@@ -26,4 +44,21 @@
   font-size: 42px;
   font-weight: bold;
   color: var(--white);
+}
+
+@media (max-width: 1080px) {
+  .container-cases {
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .container-deaths {
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .container-vaccines {
+    width: 80%;
+    margin: 1rem;
+  }
 }

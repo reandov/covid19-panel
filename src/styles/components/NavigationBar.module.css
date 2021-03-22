@@ -7,7 +7,7 @@
 
 .container {
   background-color: var(--header-background);
-  box-shadow: 0 8px 6px -6px var(--box-shadow);
+  box-shadow: 0 6px 6px -6px var(--box-shadow);
 }
 
 .container img {
@@ -24,4 +24,14 @@
   position: absolute;
   right: 0;
   margin-right: 20px;
+}
+
+@media (max-width: 1080px) {
+  .container {
+    justify-content: start;
+  }
+
+  .container h1 {
+    font-size: 24px;
+  }
 }

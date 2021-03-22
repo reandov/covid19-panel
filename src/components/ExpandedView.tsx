@@ -1,3 +1,9 @@
+import styles from "../styles/components/ExpandedView.module.css";
+
 export function ExpandedView() {
-  return <h1>Hello, world!</h1>;
+  return (
+    <div className={styles.container}>
+      <h1>Em construção 🚧!</h1>
+    </div>
+  );
 }

@@ -12,7 +12,7 @@
   padding: 10px;
   border-radius: 10px;
   background-color: var(--chart-background);
-  box-shadow: 0 8px 6px -6px var(--box-shadow);
+  box-shadow: 0 6px 6px -6px var(--box-shadow);
 }
 
 @media (max-width: 1080px) {

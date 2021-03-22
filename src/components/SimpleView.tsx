@@ -17,7 +17,7 @@ export function SimpleView() {
         <div className={styles.chartArea}>
           <LineChart
             chart_title={"Casos Acumulados"}
-            chart_colors={["#f7b707", "#e0a607"]}
+            chart_colors={["#ffc107", "#ffab00"]}
             series_name={"Casos Acumulados"}
             series_data={acc_cases}
             series_dates={dates}
@@ -26,7 +26,7 @@ export function SimpleView() {
         <div className={styles.chartArea}>
           <LineChart
             chart_title={"Óbitos Acumulados"}
-            chart_colors={["#ed0707", "#cc0606"]}
+            chart_colors={["#e53935", "#c72407"]}
             series_name={"Óbitos Acumulados"}
             series_data={acc_deaths}
             series_dates={dates}

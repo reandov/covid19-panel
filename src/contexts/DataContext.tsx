@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode } from "react";
 
-import * as national_data from "../../data/test_data.json";
+import * as national_data from "../../data/national_data.json";
 
 interface CovidData {
   dates: string[];
