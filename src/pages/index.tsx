@@ -1,3 +1,6 @@
+// React - Next Importations
+import Head from "next/head";
+
 // Component Importations
 import { NavigationBar } from "../components/NavigationBar";
 import { Footer } from "../components/Footer";
@@ -11,6 +14,9 @@ export default function Home() {
   return (
     <div className="container">
       <>
+        <Head>
+          <title>COVID-19 Painel</title>
+        </Head>
         <ViewerSwitcherProvider>
           <NavigationBar />
           <DataProvider>
