@@ -22,13 +22,21 @@ export function CardList() {
         cardData={convertToFormat(acc_cases.slice(-1))}
         cardType="cases"
       />
-      <Card cardTitle="Casos 24h" cardData="74.308" cardType="cases" />
+      <Card
+        cardTitle="Casos 24h"
+        cardData={convertToFormat(new_cases.slice(-1))}
+        cardType="cases"
+      />
       <Card
         cardTitle="Óbitos Acumulados"
         cardData={convertToFormat(acc_deaths.slice(-1))}
         cardType="deaths"
       />
-      <Card cardTitle="Óbitos 24h" cardData="2.404" cardType="deaths" />
+      <Card
+        cardTitle="Óbitos 24h"
+        cardData={convertToFormat(new_deaths.slice(-1))}
+        cardType="deaths"
+      />
       <Card
         cardTitle="Vacinados (1ª Dose)"
         cardData="11.818.482"

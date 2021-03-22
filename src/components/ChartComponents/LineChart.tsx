@@ -20,6 +20,21 @@ export function LineChart({
   const options = {
     colors: chart_colors,
     chart: {
+      toolbar: {
+        show: true,
+        offsetX: 0,
+        offsetY: 0,
+        tools: {
+          download: true,
+          selection: false,
+          zoom: true,
+          zoomin: true,
+          zoomout: true,
+          pan: false,
+          reset: true,
+          customIcons: [],
+        },
+      },
       height: 350,
       type: "area",
       animations: {
@@ -100,7 +115,7 @@ export function LineChart({
     },
     title: {
       text: chart_title,
-      align: "center",
+      align: "left",
       margin: 10,
       offsetX: 0,
       offsetY: 0,
