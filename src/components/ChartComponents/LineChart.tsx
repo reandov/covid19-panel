@@ -19,18 +19,22 @@ export function LineChart({
 
   const options = {
     colors: chart_colors,
+    grid: {
+      show: true,
+      strokeDashArray: 5,
+    },
     chart: {
       toolbar: {
         show: true,
         offsetX: 0,
-        offsetY: 0,
+        offsetY: 345,
         tools: {
           download: true,
           selection: false,
           zoom: true,
           zoomin: true,
           zoomout: true,
-          pan: false,
+          pan: true,
           reset: true,
           customIcons: [],
         },
@@ -103,10 +107,38 @@ export function LineChart({
     },
     stroke: {
       curve: "smooth",
+      width: 2,
+    },
+    yaxis: {
+      labels: {
+        formatter: function (val, _) {
+          return Intl.NumberFormat("pt-br").format(val);
+        },
+        style: {
+          fontSize: 12,
+        },
+      },
+      title: {
+        text: series_name,
+        style: {
+          fontSize: 12,
+          fontWeight: 500,
+        },
+      },
     },
     xaxis: {
       type: "datetime",
       categories: series_dates,
+      labels: {
+        datetimeUTC: true,
+      },
+      title: {
+        text: "Data",
+        style: {
+          fontSize: 12,
+          fontWeight: 500,
+        },
+      },
     },
     tooltip: {
       x: {
@@ -115,7 +147,7 @@ export function LineChart({
     },
     title: {
       text: chart_title,
-      align: "left",
+      align: "center",
       margin: 10,
       offsetX: 0,
       offsetY: 0,

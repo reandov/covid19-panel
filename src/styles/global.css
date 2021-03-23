@@ -4,55 +4,28 @@
   box-sizing: border-box;
 }
 
+/* Default colors */
 :root {
   --white: #ffffff;
-  --background: #121113;
-  --header-background: #2a2f32;
+  --black: #000000;
   --box-shadow: #000000;
-  --chart-background: #e4e4e4;
+  --header-background: #2a2f32;
+  --chart-background: #f0f0f0;
   --text: #161616;
-  --text-highlight: #b3b9ff;
   --title: #eeeeee;
-  --red: #e83f5b;
-  --green: #4cd62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
-  --blue-twitter: #2aa9e0;
 }
 
+/* Dark Mode colors */
 @media (prefers-color-scheme: dark) {
   :root {
-    --white: #ffffff;
     --background: #121113;
-    --header-background: #2a2f32;
-    --box-shadow: #000000;
-    --chart-background: #e4e4e4;
-    --text: #161616;
-    --text-highlight: #b3b9ff;
-    --title: #eeeeee;
-    --red: #e83f5b;
-    --green: #4cd62b;
-    --blue: #5965e0;
-    --blue-dark: #4953b8;
-    --blue-twitter: #2aa9e0;
   }
 }
 
+/* Light Mode colors */
 @media (prefers-color-scheme: light) {
   :root {
-    --white: #ffffff;
     --background: #d6d6d6;
-    --header-background: #2a2f32;
-    --box-shadow: #000000;
-    --chart-background: #e4e4e4;
-    --text: #161616;
-    --text-highlight: #b3b9ff;
-    --title: #e7e7e7;
-    --red: #e83f5b;
-    --green: #4cd62b;
-    --blue: #5965e0;
-    --blue-dark: #4953b8;
-    --blue-twitter: #2aa9e0;
   }
 }
 
