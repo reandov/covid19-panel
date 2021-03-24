@@ -8,7 +8,7 @@ export function LineChart({
   chart_colors,
   series_name,
   series_data,
-  series_dates,
+  series_categories,
 }) {
   const series = [
     {
@@ -128,7 +128,7 @@ export function LineChart({
     },
     xaxis: {
       type: "datetime",
-      categories: series_dates,
+      categories: series_categories,
       labels: {
         datetimeUTC: true,
       },
