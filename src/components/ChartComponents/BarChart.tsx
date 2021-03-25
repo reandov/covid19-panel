@@ -26,6 +26,10 @@ export function BarChart({
         enabled: false,
       },
     },
+    grid: {
+      show: true,
+      strokeDashArray: 5,
+    },
     plotOptions: {
       bar: {
         borderRadius: 5,
@@ -50,7 +54,7 @@ export function BarChart({
         show: false,
       },
       axisTicks: {
-        show: false,
+        show: true,
       },
       crosshairs: {
         fill: {
@@ -67,6 +71,7 @@ export function BarChart({
       tooltip: {
         enabled: true,
       },
+      tickAmount: 20,
     },
     yaxis: {
       axisBorder: {

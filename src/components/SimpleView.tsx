@@ -11,10 +11,13 @@ export function SimpleView() {
   var {
     dates,
     states,
+    epi_weeks_labels,
     acc_cases,
     acc_deaths,
     new_cases,
     new_deaths,
+    epi_weeks_ncases,
+    epi_weeks_ndeaths,
     daily_state_acc_cases,
     daily_state_acc_deaths,
     daily_state_new_cases,
@@ -102,6 +105,27 @@ export function SimpleView() {
             series_name={"Óbitos Novos"}
             series_data={daily_state_new_deaths}
             series_categories={states}
+          />
+        </div>
+      </div>
+
+      <div className={styles.chartContainer}>
+        <div className={styles.chartArea}>
+          <BarChart
+            chart_title={"Casos Novos (por Semana Epidemiológica)"}
+            chart_colors={["#f7b707", "#e0a607"]}
+            series_name={"Casos Novos"}
+            series_data={epi_weeks_ncases}
+            series_categories={epi_weeks_labels}
+          />
+        </div>
+        <div className={styles.chartArea}>
+          <BarChart
+            chart_title={"Óbitos Novos (por Semana Epidemiológica)"}
+            chart_colors={["#ed0707", "#cc0606"]}
+            series_name={"Óbitos Novos"}
+            series_data={epi_weeks_ndeaths}
+            series_categories={epi_weeks_labels}
           />
         </div>
       </div>
