@@ -5,10 +5,10 @@ import Head from "next/head";
 import { NavigationBar } from "../components/NavigationBar";
 import { Footer } from "../components/Footer";
 import { ViewManager } from "../components/ViewManager";
+import { LocationMenu } from "../components/LocationMenu";
 
-// Contexts Importations
-import { ViewerSwitcherProvider } from "../contexts/ViewerSwitcherContext";
-import { DataProvider } from "../contexts/DataContext";
+// Context Importations
+import { LocationMenuProvider } from "../contexts/LocationMenuContext";
 
 export default function Home() {
   return (
@@ -17,13 +17,15 @@ export default function Home() {
         <Head>
           <title>COVID-19 Painel</title>
         </Head>
-        <ViewerSwitcherProvider>
-          <NavigationBar />
-          <DataProvider>
-            <ViewManager />
-          </DataProvider>
-          <Footer />
-        </ViewerSwitcherProvider>
+
+        <NavigationBar />
+
+        <LocationMenuProvider>
+          <LocationMenu />
+          <ViewManager />
+        </LocationMenuProvider>
+
+        <Footer />
       </>
     </div>
   );

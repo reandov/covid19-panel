@@ -1,5 +1,3 @@
-import { ViewSwitcher } from "./ViewSwitcher";
-
 import styles from "../styles/components/NavigationBar.module.css";
 
 export function NavigationBar() {
@@ -7,9 +5,6 @@ export function NavigationBar() {
     <div className={styles.container}>
       <img src="/icons/covid_icon.svg" alt="virus icon" />
       <h1>COVID-19 — Painel</h1>
-      <div className={styles.DarkModeButton}>
-        <ViewSwitcher />
-      </div>
     </div>
   );
 }

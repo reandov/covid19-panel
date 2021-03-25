@@ -1,20 +1,25 @@
+// React - Next Importations
 import { useContext } from "react";
 
-import { SimpleView } from "../components/SimpleView";
-import { ExpandedView } from "../components/ExpandedView";
-import { CardList } from "../components/CardList";
+// Components Importations
+import { NationalView } from "./NationalView";
+import { StateView } from "./StateView";
 
-import { ViewerSwitcherContext } from "../contexts/ViewerSwitcherContext";
+// Contexts Importations
+import { LocationMenuContext } from "../contexts/LocationMenuContext";
 
 export function ViewManager() {
-  const { isViewerSwitcherOn } = useContext(ViewerSwitcherContext);
+  const { location } = useContext(LocationMenuContext);
 
-  return isViewerSwitcherOn ? (
-    <ExpandedView />
-  ) : (
+  return (
     <>
-      <CardList />
-      <SimpleView />
+      {location == "br" ? (
+        <>
+          <NationalView />
+        </>
+      ) : (
+        <StateView location={location} />
+      )}
     </>
   );
 }

@@ -20,7 +20,6 @@ export function ViewerSwitcherProvider({
     isViewerSwitcherOn
       ? setIsViewerSwitcherOn(false)
       : setIsViewerSwitcherOn(true);
-    console.log(isViewerSwitcherOn);
   }
 
   return (
