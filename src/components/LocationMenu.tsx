@@ -43,19 +43,21 @@ export function LocationMenu() {
 
   return (
     <div className={styles.container}>
-      <h1>Selecione uma localidade:</h1>
-      <select
-        name="states"
-        id="state-select"
-        onChange={handleChange}
-        value={location}
-      >
-        {state_list.map((item) => (
-          <option key={item.key} value={item.key}>
-            {item.value}
-          </option>
-        ))}
-      </select>
+      <div className={styles.content}>
+        <h1>LOCALIZAÇÃO:</h1>
+        <select
+          name="states"
+          id="state-select"
+          onChange={handleChange}
+          value={location}
+        >
+          {state_list.map((item) => (
+            <option key={item.key} value={item.key}>
+              {item.value}
+            </option>
+          ))}
+        </select>
+      </div>
     </div>
   );
 }

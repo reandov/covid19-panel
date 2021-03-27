@@ -1,33 +1,25 @@
-.container-cases {
+.container {
   width: 14%;
-  background-color: #ffc107;
-  border-radius: 10px;
-  border: 5px solid #ffab00;
-  box-shadow: 0 6px 6px -6px var(--box-shadow);
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
-.container-deaths {
-  width: 14%;
-  background-color: #e53935;
-  border-radius: 10px;
-  border: 5px solid #c72407;
-  box-shadow: 0 6px 6px -6px var(--box-shadow);
+/* ffc107 */
+.cases {
+  background-color: var(--cases);
 }
 
-.container-vaccines {
-  width: 14%;
+.deaths {
+  background-color: var(--deaths);
+}
+
+.vaccines {
   background-color: #0cc705;
-  border-radius: 10px;
-  border: 5px solid #069218;
-  box-shadow: 0 6px 6px -6px var(--box-shadow);
 }
 
-.container-extra {
-  width: 14%;
-  background-color: #2196f3;
-  border-radius: 10px;
-  border: 5px solid #0d47a1;
-  box-shadow: 0 6px 6px -6px var(--box-shadow);
+.extra {
+  background-color: var(--extra);
 }
 
 .cardInfo {
@@ -38,40 +30,63 @@
 }
 
 .cardInfo h1 {
-  color: white;
-  font-size: 150%;
+  color: var(--white);
+  font-size: 180%;
 }
 
 .cardInfo hr {
   width: 100%;
-  color: black;
+  color: white;
   border: 1px solid var(--white);
 }
 
 .cardInfo p {
-  font-size: 150%;
+  font-size: 250%;
   font-weight: bold;
   color: var(--white);
 }
 
+@media (max-width: 1890px) {
+  .container {
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .cardInfo h1 {
+    font-size: 160%;
+  }
+
+  .cardInfo p {
+    font-size: 190%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .cardInfo h1 {
+    font-size: 120%;
+  }
+
+  .cardInfo p {
+    font-size: 150%;
+  }
+}
+
 @media (max-width: 1080px) {
-  .container-cases {
+  .container {
     width: 80%;
     margin: 1rem;
   }
 
-  .container-deaths {
-    width: 80%;
-    margin: 1rem;
+  .cardInfo h1 {
+    font-size: 250%;
   }
 
-  .container-vaccines {
-    width: 80%;
-    margin: 1rem;
-  }
-
-  .container-extra {
-    width: 80%;
-    margin: 1rem;
+  .cardInfo p {
+    font-size: 250%;
   }
 }

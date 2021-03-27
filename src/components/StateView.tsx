@@ -20,7 +20,7 @@ export function StateView({ location }) {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Casos Acumulados"}
-              chart_colors={["#ffc107", "#ffab00"]}
+              chart_colors={["#116ddd"]}
               series_name={"Casos Acumulados"}
               series_data={Object.values(state.accumulated_num_cases)}
               series_categories={Object.values(state.date)}
@@ -29,7 +29,7 @@ export function StateView({ location }) {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Óbitos Acumulados"}
-              chart_colors={["#e53935", "#c72407"]}
+              chart_colors={["#6b7077"]}
               series_name={"Óbitos Acumulados"}
               series_data={Object.values(state.accumulated_num_deaths)}
               series_categories={Object.values(state.date)}
@@ -40,7 +40,7 @@ export function StateView({ location }) {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Casos Novos (últimas 24h)"}
-              chart_colors={["#f7b707", "#e0a607"]}
+              chart_colors={["#116ddd"]}
               series_name={"Novos Casos"}
               series_data={Object.values(state.new_num_cases)}
               series_categories={Object.values(state.date)}
@@ -49,7 +49,7 @@ export function StateView({ location }) {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Óbitos Novos (últimas 24h)"}
-              chart_colors={["#ed0707", "#cc0606"]}
+              chart_colors={["#6b7077"]}
               series_name={"Novos Óbitos"}
               series_data={Object.values(state.new_num_deaths)}
               series_categories={Object.values(state.date)}

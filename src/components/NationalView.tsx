@@ -44,7 +44,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Casos Acumulados"}
-              chart_colors={["#ffc107", "#ffab00"]}
+              chart_colors={["#116ddd"]}
               series_name={"Casos Acumulados"}
               series_data={national_acc_cases}
               series_categories={dates}
@@ -53,7 +53,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Óbitos Acumulados"}
-              chart_colors={["#e53935", "#c72407"]}
+              chart_colors={["#6b7077"]}
               series_name={"Óbitos Acumulados"}
               series_data={national_acc_deaths}
               series_categories={dates}
@@ -64,7 +64,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Casos Novos (últimas 24h)"}
-              chart_colors={["#f7b707", "#e0a607"]}
+              chart_colors={["#116ddd"]}
               series_name={"Novos Casos"}
               series_data={national_new_cases}
               series_categories={dates}
@@ -73,7 +73,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <LineChart
               chart_title={"Óbitos Novos (últimas 24h)"}
-              chart_colors={["#ed0707", "#cc0606"]}
+              chart_colors={["#6b7077"]}
               series_name={"Novos Óbitos"}
               series_data={national_new_deaths}
               series_categories={dates}
@@ -85,7 +85,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Casos Acumulados p/ Estado"}
-              chart_colors={["#f7b707", "#e0a607"]}
+              chart_colors={["#116ddd"]}
               series_name={"Casos Acumulados"}
               series_data={daily_acc_cases}
               series_categories={state}
@@ -94,7 +94,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Óbitos Acumulados p/ Estado"}
-              chart_colors={["#ed0707", "#cc0606"]}
+              chart_colors={["#6b7077"]}
               series_name={"Óbitos Acumulados"}
               series_data={daily_acc_deaths}
               series_categories={state}
@@ -106,7 +106,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Casos Novos (últimas 24h) p/ Estado"}
-              chart_colors={["#f7b707", "#e0a607"]}
+              chart_colors={["#116ddd"]}
               series_name={"Casos Novos"}
               series_data={daily_new_cases}
               series_categories={state}
@@ -115,7 +115,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Óbitos Novos (últimas 24h) p/ Estado"}
-              chart_colors={["#ed0707", "#cc0606"]}
+              chart_colors={["#6b7077"]}
               series_name={"Óbitos Novos"}
               series_data={daily_new_deaths}
               series_categories={state}
@@ -127,7 +127,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Casos Novos (por Semana Epidemiológica)"}
-              chart_colors={["#f7b707", "#e0a607"]}
+              chart_colors={["#116ddd"]}
               series_name={"Casos Novos"}
               series_data={epi_week_new_cases}
               series_categories={epi_week_labels}
@@ -136,7 +136,7 @@ export function NationalView() {
           <div className={styles.chartArea}>
             <BarChart
               chart_title={"Óbitos Novos (por Semana Epidemiológica)"}
-              chart_colors={["#ed0707", "#cc0606"]}
+              chart_colors={["#6b7077"]}
               series_name={"Óbitos Novos"}
               series_data={epi_week_new_deaths}
               series_categories={epi_week_labels}

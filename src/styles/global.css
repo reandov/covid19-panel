@@ -4,29 +4,19 @@
   box-sizing: border-box;
 }
 
-/* Default colors */
 :root {
   --white: #ffffff;
   --black: #000000;
+  --cases: #116ddd;
+  --deaths: #6b7077;
+  --extra: #11852a;
   --box-shadow: #000000;
-  --header-background: #2a2f32;
-  --chart-background: #f0f0f0;
+  --header-background: #ffffff;
+  --background: #f0f2f5;
+  --background-alt: #24292e;
+  --chart-background: #ffffff;
   --text: #161616;
-  --title: #eeeeee;
-}
-
-/* Dark Mode colors */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121113;
-  }
-}
-
-/* Light Mode colors */
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #d6d6d6;
-  }
+  --title: #161616;
 }
 
 @media (max-width: 1080px) {

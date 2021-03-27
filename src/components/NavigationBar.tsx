@@ -4,7 +4,9 @@ export function NavigationBar() {
   return (
     <div className={styles.container}>
       <img src="/icons/covid_icon.svg" alt="virus icon" />
-      <h1>COVID-19 — Painel</h1>
+      <h1>
+        <strong>COVID-19 — </strong> Painel
+      </h1>
     </div>
   );
 }
