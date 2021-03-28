@@ -13,7 +13,7 @@ export function NationalView() {
   const dates = Object.values(national_data.date);
   const national_acc_cases = Object.values(national_data.accumulated_num_cases);
   const national_acc_deaths = Object.values(
-    national_data.accumulated_num_cases
+    national_data.accumulated_num_deaths
   );
   const national_new_cases = Object.values(national_data.new_num_cases);
   const national_new_deaths = Object.values(national_data.new_num_deaths);
