@@ -2,9 +2,9 @@ import { useContext } from "react";
 
 import { LocationMenuContext } from "../contexts/LocationMenuContext";
 
-import styles from "../styles/components/LocationMenu.module.css";
+import styles from "../styles/components/LocationPicker.module.css";
 
-export function LocationMenu() {
+export function LocationPicker() {
   const { location, changeLocation } = useContext(LocationMenuContext);
   const state_list = [
     { key: "br", value: "Brasil" },
@@ -43,21 +43,19 @@ export function LocationMenu() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
-        <h1>LOCALIZAÇÃO:</h1>
-        <select
-          name="states"
-          id="state-select"
-          onChange={handleChange}
-          value={location}
-        >
-          {state_list.map((item) => (
-            <option key={item.key} value={item.key}>
-              {item.value}
-            </option>
-          ))}
-        </select>
-      </div>
+      <h1>LOCALIZAÇÃO:</h1>
+      <select
+        name="states"
+        id="state-select"
+        onChange={handleChange}
+        value={location}
+      >
+        {state_list.map((item) => (
+          <option key={item.key} value={item.key}>
+            {item.value}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

@@ -1,12 +1,5 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1.2rem;
-}
-
-.container .content {
-  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--header-background);

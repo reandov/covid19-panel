@@ -28,11 +28,6 @@ export function CardList({
         cardType="cases"
       />
       <Card
-        cardTitle="Dados Atualizados"
-        cardData={dates.slice(-1)}
-        cardType="extra"
-      />
-      <Card
         cardTitle="Óbitos Acumulados"
         cardData={convertToFormat(acc_deaths.slice(-1))}
         cardType="deaths"
