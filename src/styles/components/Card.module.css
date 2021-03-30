@@ -10,8 +10,16 @@
   background-color: var(--cases);
 }
 
+.cases:hover {
+  opacity: 90%;
+}
+
 .deaths {
   background-color: var(--deaths);
+}
+
+.deaths:hover {
+  opacity: 90%;
 }
 
 .vaccines {

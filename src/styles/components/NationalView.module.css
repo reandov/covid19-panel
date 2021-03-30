@@ -18,9 +18,11 @@
 @media (max-width: 1080px) {
   .chartContainer {
     flex-direction: column;
+    padding: 2px;
   }
 
   .chartArea {
     width: 100%;
+    padding: 2px;
   }
 }
