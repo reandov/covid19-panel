@@ -14,14 +14,14 @@ import { LocationMenuProvider } from "../contexts/LocationMenuContext";
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyARAjzGIsOP6rk4MEBdBmGRd9K1YAA7HIg",
-  authDomain: "covid19br-dashboard.firebaseapp.com",
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
   databaseURL: "https://covid19br-dashboard-default-rtdb.firebaseio.com",
-  projectId: "covid19br-dashboard",
-  storageBucket: "covid19br-dashboard.appspot.com",
-  messagingSenderId: "1024834188542",
-  appId: "1:1024834188542:web:edb9a82cf81376273021af",
-  measurementId: "G-VK52LZ0NFX",
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID,
 };
 
 if (!firebase.apps.length) {
