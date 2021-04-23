@@ -8,7 +8,7 @@ import { StateView } from "./StateView";
 // Contexts Importations
 import { LocationMenuContext } from "../contexts/LocationMenuContext";
 
-export function ViewManager() {
+export function PanelManager() {
   const { location } = useContext(LocationMenuContext);
 
   return (

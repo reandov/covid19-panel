@@ -16,7 +16,6 @@ export function LocationMenuProvider({ children }: LocationMenuProviderProps) {
 
   function changeLocation(location) {
     setLocation(location);
-    console.log(location);
   }
 
   return (
