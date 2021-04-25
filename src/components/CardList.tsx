@@ -1,5 +1,3 @@
-import { useContext } from "react";
-
 import { Card } from "../components/Card";
 
 import styles from "../styles/components/CardList.module.css";

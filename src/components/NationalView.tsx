@@ -1,5 +1,6 @@
 import { LineChart } from "./ChartComponents/LineChart";
 import { BarChart } from "./ChartComponents/BarChart";
+import { DataInfo } from "./DataInfo";
 import { CardList } from "../components/CardList";
 
 import * as national_data from "../../data/national_data.json";
@@ -32,6 +33,7 @@ export function NationalView() {
 
   return (
     <>
+      <DataInfo />
       <CardList
         dates={dates}
         acc_cases={national_acc_cases}

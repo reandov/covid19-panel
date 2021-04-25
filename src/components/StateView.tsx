@@ -1,4 +1,5 @@
 import { LineChart } from "./ChartComponents/LineChart";
+import { DataInfo } from "./DataInfo";
 import { CardList } from "../components/CardList";
 
 import styles from "../styles/components/NationalView.module.css";
@@ -8,6 +9,7 @@ export function StateView({ location }) {
 
   return (
     <>
+      <DataInfo />
       <CardList
         dates={Object.values(state.date)}
         acc_cases={Object.values(state.accumulated_num_cases)}

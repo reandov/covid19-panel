@@ -3,9 +3,9 @@ import Head from "next/head";
 
 // Component Importations
 import { NavigationBar } from "../components/NavigationBar";
-import { Footer } from "../components/Footer";
+import { Header } from "../components/Header";
 import { PanelManager } from "../components/PanelManager";
-import { HeaderPanel } from "../components/HeaderPanel";
+import { Footer } from "../components/Footer";
 
 // Context Importations
 import { LocationMenuProvider } from "../contexts/LocationMenuContext";
@@ -21,7 +21,7 @@ export default function Home() {
         <NavigationBar />
 
         <LocationMenuProvider>
-          <HeaderPanel />
+          <Header />
           <PanelManager />
         </LocationMenuProvider>
 
