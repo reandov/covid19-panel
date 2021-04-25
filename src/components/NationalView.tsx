@@ -48,7 +48,7 @@ export function NationalView() {
         acc_cases={nationalData.accumulated_num_cases}
         acc_deaths={nationalData.accumulated_num_deaths}
         new_cases={nationalData.new_num_cases}
-        new_deaths={nationalData.new_num_cases}
+        new_deaths={nationalData.new_num_deaths}
       />
       <div className="container">
         <div className={styles.chartContainer}>
