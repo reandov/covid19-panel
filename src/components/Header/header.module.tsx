@@ -8,6 +8,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     appbar: {
       alignItems: "center",
     },
+    icon: {
+      width: "2.8rem",
+      height: "2.8rem",
+    },
     title: {
       flexGrow: 1,
       marginLeft: 12,

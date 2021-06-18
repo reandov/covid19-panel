@@ -1,23 +1,13 @@
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
 
 import { Header } from "../components/Header";
 
+import { lightTheme, darkTheme } from "../styles/theme";
 import "../styles/global.css";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#eeeeee",
-    },
-    secondary: {
-      main: "#eeeeee",
-    },
-  },
-});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={darkTheme}>
       <main>
         <Header />
         <Component {...pageProps} />

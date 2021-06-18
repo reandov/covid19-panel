@@ -24,8 +24,7 @@ export function Header() {
               <img
                 src="/icons/covid_icon.svg"
                 alt="virus icon"
-                height={42}
-                width={42}
+                className={classes.icon}
               />
               <Typography variant="h5" className={classes.title}>
                 COVID-19 | Brasil
