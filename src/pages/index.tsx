@@ -1,17 +1,23 @@
 // React - Next Importations
+import React from "react";
 import Head from "next/head";
+
+// Library Components
+import {
+  AppBar,
+  Button,
+  Container,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 // Firebase
 import firebase from "firebase";
 
-// Component Importations
-import { NavigationBar } from "../components/NavigationBar";
-import { Header } from "../components/Header";
-import { PanelManager } from "../components/PanelManager";
-import { Footer } from "../components/Footer";
-
-// Context Importations
-import { LocationMenuProvider } from "../contexts/LocationMenuContext";
+// Styles
+import { useStyles } from "./home.module";
 
 // Firebase Configuration
 const firebaseConfig = {
@@ -30,6 +36,8 @@ if (!firebase.apps.length) {
 }
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
     <div className="container">
       <>
@@ -37,14 +45,9 @@ export default function Home() {
           <title>COVID-19 Painel</title>
         </Head>
 
-        <NavigationBar />
-
-        <LocationMenuProvider>
-          <Header />
-          <PanelManager />
-        </LocationMenuProvider>
-
-        <Footer />
+        <div>
+          <h1>Olá</h1>
+        </div>
       </>
     </div>
   );
