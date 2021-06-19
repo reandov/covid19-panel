@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     appbar: {
-      alignItems: "center",
+      // alignItems: "center",
     },
     icon: {
       width: "2.8rem",

@@ -3,12 +3,24 @@ import React from "react";
 import Head from "next/head";
 
 // Library Components
-import { AppBar, Toolbar, Typography } from "@material-ui/core";
+import {
+  AppBar,
+  IconButton,
+  Theme,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import { Brightness7 } from "@material-ui/icons";
 
 // Styles
 import { useStyles } from "./header.module";
 
-export function Header() {
+interface IThemeProps {
+  currentTheme: Theme;
+  handleThemeChange: () => void;
+}
+
+export function Header({ currentTheme, handleThemeChange }: IThemeProps) {
   const classes = useStyles();
 
   return (
@@ -29,6 +41,13 @@ export function Header() {
               <Typography variant="h5" className={classes.title}>
                 COVID-19 | Brasil
               </Typography>
+              <IconButton
+                onClick={() => {
+                  handleThemeChange();
+                }}
+              >
+                <Brightness7 />
+              </IconButton>
             </Toolbar>
           </AppBar>
         </div>

@@ -1,14 +1,14 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
-import { theme } from "../styles/theme";
+import { lightTheme } from "../styles/theme";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
+          <meta name="theme-color" content={lightTheme.palette.primary.main} />
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
