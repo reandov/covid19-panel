@@ -17,7 +17,7 @@ export function BarChart({
     },
   ];
 
-  const options = {
+  const options: any = {
     colors: chart_colors,
     chart: {
       height: 350,

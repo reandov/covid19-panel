@@ -17,7 +17,7 @@ export function LineChart({
     },
   ];
 
-  const options = {
+  const options: any = {
     colors: chart_colors,
     grid: {
       show: true,
