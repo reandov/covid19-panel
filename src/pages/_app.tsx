@@ -1,8 +1,13 @@
-import React, { useContext, useState } from "react";
-import { Theme, ThemeProvider } from "@material-ui/core";
+// React - Next Importations
+import React, { useState } from "react";
 
+// External Components
+import { Theme, ThemeProvider, CssBaseline } from "@material-ui/core";
+
+// Project Components
 import { Header } from "../components/Header";
 
+// Styles
 import { lightTheme, darkTheme } from "../styles/theme";
 import "../styles/global.css";
 
@@ -17,13 +22,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <main>
-        <Header
-          handleThemeChange={handleThemeChange}
-          currentTheme={currentTheme}
-        />
-        <Component {...pageProps} />
-      </main>
+      <CssBaseline />
+      <Header
+        handleThemeChange={handleThemeChange}
+        currentTheme={currentTheme}
+      />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

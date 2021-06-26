@@ -10,7 +10,7 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Brightness7 } from "@material-ui/icons";
+import { Brightness2, Brightness7 } from "@material-ui/icons";
 
 // Styles
 import { useStyles } from "./header.module";
@@ -46,7 +46,11 @@ export function Header({ currentTheme, handleThemeChange }: IThemeProps) {
                   handleThemeChange();
                 }}
               >
-                <Brightness7 />
+                {currentTheme.palette.type === "light" ? (
+                  <Brightness2 />
+                ) : (
+                  <Brightness7 />
+                )}
               </IconButton>
             </Toolbar>
           </AppBar>

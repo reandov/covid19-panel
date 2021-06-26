@@ -1,11 +1,13 @@
 // React - Next Importations
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 
-// Library Components
+// External Components
 import {
   AppBar,
   Button,
+  Card,
+  CardContent,
   Container,
   IconButton,
   Toolbar,
@@ -13,41 +15,57 @@ import {
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 
-// Firebase
-import firebase from "firebase";
+// Internal Components
+import { LocationPicker } from "../components/LocationPicker";
+
+// Services
+import { database } from "../services/firebase";
+
+// Types
+import {
+  INationalData,
+  IDailyData,
+  IEpidemiologicalData,
+} from "../utils/types/types";
 
 // Styles
 import { useStyles } from "./home.module";
-
-// Firebase Configuration
-const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
-  databaseURL: "https://covid19br-panel-default-rtdb.firebaseio.com",
-  projectId: process.env.PROJECT_ID,
-  storageBucket: process.env.STORAGE_BUCKET,
-  messagingSenderId: process.env.MESSAGING_SENDER_ID,
-  appId: process.env.APP_ID,
-  measurementId: process.env.MEASUREMENT_ID,
-};
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+import { convertToReadableNumber } from "../utils/functions/functions";
+import { ResumeCards } from "../components/ResumeCards";
 
 export default function Home() {
   const classes = useStyles();
 
+  const [nationalData, setNationalData] = useState<INationalData>(null);
+  const [epiWeeksData, setEpiWeeksData] = useState<IDailyData>(null);
+  const [dailyData, setDailyData] = useState<IEpidemiologicalData>(null);
+
+  async function getDataFromDatabase() {
+    await database.ref("national-data").once("value", (snapshot) => {
+      setNationalData(snapshot.val());
+    });
+    await database.ref("epi-weeks-data").once("value", (snapshot) => {
+      setEpiWeeksData(snapshot.val());
+    });
+    await database.ref("daily-data").once("value", (snapshot) => {
+      setDailyData(snapshot.val());
+    });
+  }
+
+  useEffect(() => {
+    getDataFromDatabase();
+  }, []);
+
   return (
     <div className="container">
       <>
-        <Head>
-          <title>COVID-19 Painel</title>
-        </Head>
-
-        <div>
-          <h1>Olá</h1>
-        </div>
+        <LocationPicker />
+        <ResumeCards
+          accumulated_cases={nationalData?.accumulated_num_cases}
+          accumulated_deaths={nationalData?.accumulated_num_deaths}
+          new_cases={nationalData?.new_num_cases}
+          new_deaths={nationalData?.new_num_deaths}
+        />
       </>
     </div>
   );
