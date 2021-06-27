@@ -5,19 +5,13 @@ export const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    title: {
-      flexGrow: 1,
-      marginLeft: 12,
-    },
     chartContainer: {
       marginTop: 10,
     },
     chartAreaContainer: {
       display: "flex",
       flexDirection: "row",
+      // width: "100%",
       ["@media (max-width: 960px)"]: {
         flexDirection: "column",
       },

@@ -31,36 +31,44 @@ export function ResumeCards({
     <Container className={classes.container}>
       <Card>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom>Casos Acumulados</Typography>
+          <Typography gutterBottom variant="h5">
+            CASOS ACUMULADOS
+          </Typography>
           <Divider variant="middle" />
-          <Typography>
+          <Typography variant="h4">
             {convertToReadableNumber(accumulated_cases?.slice(-1)[0])}
           </Typography>
         </CardContent>
       </Card>
       <Card>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom>Casos Acumulados</Typography>
+          <Typography gutterBottom variant="h5">
+            ÓBITOS ACUMULADOS
+          </Typography>
           <Divider variant="middle" />
-          <Typography>
+          <Typography variant="h4">
             {convertToReadableNumber(accumulated_deaths?.slice(-1)[0])}
           </Typography>
         </CardContent>
       </Card>
       <Card>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom>Casos Acumulados</Typography>
+          <Typography gutterBottom variant="h5">
+            NOVOS CASOS | 24H
+          </Typography>
           <Divider variant="middle" />
-          <Typography>
+          <Typography variant="h4">
             {convertToReadableNumber(new_cases?.slice(-1)[0])}
           </Typography>
         </CardContent>
       </Card>
       <Card>
         <CardContent className={classes.cardContent}>
-          <Typography gutterBottom>Casos Acumulados</Typography>
+          <Typography gutterBottom variant="h5">
+            NOVOS ÓBITOS | 24H
+          </Typography>
           <Divider variant="middle" />
-          <Typography>
+          <Typography variant="h4">
             {convertToReadableNumber(new_deaths?.slice(-1)[0])}
           </Typography>
         </CardContent>

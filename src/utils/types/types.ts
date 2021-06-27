@@ -10,6 +10,10 @@ export interface ICardData {
   new_deaths: number[];
 }
 
+export interface IDefaultChartData extends ICardData {
+  date: string[];
+}
+
 export interface INationalData {
   accumulated_num_cases: number[];
   accumulated_num_deaths: number[];
@@ -37,4 +41,12 @@ export interface IEpidemiologicalData {
   epidemiological_week: number[];
   new_cases: number[];
   new_deaths: number[];
+}
+
+export interface IChartData {
+  chartTitle: string;
+  chartColors: string[];
+  seriesName: string;
+  seriesData: number[];
+  seriesCategories: string[];
 }

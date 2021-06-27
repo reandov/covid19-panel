@@ -6,13 +6,16 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-around",
+      justifyContent: "center",
+      ["@media (max-width: 1150px)"]: {
+        flexDirection: "column",
+        gap: 15,
+      },
     },
     cardContent: {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      gap: 5,
     },
   })
 );
