@@ -14,21 +14,25 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     chartContainer: {
       marginTop: 10,
+      padding: 15,
     },
     chartAreaContainer: {
       display: "flex",
       flexDirection: "row",
+      alignItems: "center",
       ["@media (max-width: 960px)"]: {
         flexDirection: "column",
       },
     },
     chart: {
       width: "50%",
-      margin: "5px",
-      padding: "10px",
+      padding: 5,
       ["@media (max-width: 960px)"]: {
         width: "100%",
       },
+    },
+    innerChart: {
+      padding: 5,
     },
   })
 );

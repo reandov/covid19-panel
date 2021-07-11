@@ -1,6 +1,6 @@
 // React - Next Importations
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Library Components
 import {
@@ -18,7 +18,9 @@ import { ILocation } from "../../utils/types/types";
 import { useStyles } from "./locationPicker.module";
 
 export function LocationPicker() {
+  const router = useRouter();
   const classes = useStyles();
+
   const [location, setLocation] = useState("");
 
   const locationsList: ILocation[] = [
@@ -28,7 +30,7 @@ export function LocationPicker() {
     { key: "am", value: "Amazonas" },
     { key: "ap", value: "Amapá" },
     { key: "ba", value: "Bahia" },
-    { key: "ce", value: "Ceará" },
+    { key: "CE", value: "Ceará" },
     { key: "df", value: "Distrito Federal" },
     { key: "es", value: "Espírito Santo" },
     { key: "go", value: "Goiás" },
@@ -56,10 +58,6 @@ export function LocationPicker() {
     setLocation(event.target.value as string);
   };
 
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
-
   return (
     <Box className={classes.container}>
       <FormControl variant="outlined" className={classes.select}>
@@ -75,10 +73,14 @@ export function LocationPicker() {
         >
           {locationsList.map((location: ILocation) => {
             return (
-              <MenuItem key={location.key} value={location.key}>
-                <Link href={`${location.key}`} locale={"/location"}>
-                  {location.value}
-                </Link>
+              <MenuItem
+                key={location.key}
+                value={location.key}
+                onClick={() => {
+                  router.push(`location/${location.key.toUpperCase()}`);
+                }}
+              >
+                {location.value}
               </MenuItem>
             );
           })}

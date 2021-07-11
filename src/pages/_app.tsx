@@ -6,6 +6,7 @@ import { Theme, ThemeProvider, CssBaseline } from "@material-ui/core";
 
 // Project Components
 import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
 
 // Styles
 import { lightTheme, darkTheme } from "../styles/theme";

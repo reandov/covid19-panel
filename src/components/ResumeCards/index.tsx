@@ -29,7 +29,7 @@ export function ResumeCards({
 
   return (
     <Container className={classes.container}>
-      <Card>
+      <Card className={classes.cardContainer}>
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant="h5">
             CASOS ACUMULADOS
@@ -40,7 +40,7 @@ export function ResumeCards({
           </Typography>
         </CardContent>
       </Card>
-      <Card>
+      <Card className={classes.cardContainer}>
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant="h5">
             ÓBITOS ACUMULADOS
@@ -51,7 +51,7 @@ export function ResumeCards({
           </Typography>
         </CardContent>
       </Card>
-      <Card>
+      <Card className={classes.cardContainer}>
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant="h5">
             NOVOS CASOS | 24H
@@ -62,7 +62,7 @@ export function ResumeCards({
           </Typography>
         </CardContent>
       </Card>
-      <Card>
+      <Card className={classes.cardContainer}>
         <CardContent className={classes.cardContent}>
           <Typography gutterBottom variant="h5">
             NOVOS ÓBITOS | 24H

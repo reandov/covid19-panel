@@ -43,6 +43,16 @@ export interface IEpidemiologicalData {
   new_deaths: number[];
 }
 
+export interface IStateData {
+  accumulated_num_cases: number[];
+  accumulated_num_deaths: number[];
+  new_num_cases: number[];
+  new_num_deaths: number[];
+  date: string[];
+  country: string[];
+  state: string[];
+}
+
 export interface IChartData {
   chartTitle: string;
   chartColors: string[];
